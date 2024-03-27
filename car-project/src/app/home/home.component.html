@@ -1,25 +1,15 @@
 <body>
 
     <div class="container">
-      <h1>Welcome to Our Car Site</h1>
+      <h1>Welcome to our car site</h1>
+      <ng-container *ngIf="!token">
+        <a routerLink="/login" class="btn">Login</a>
+        <a routerLink="/register" class="btn">Register</a>
+      </ng-container>
+      <ng-container *ngIf="token">
+        <a routerLink="/dashboard" class="btn">Dashboard</a>
+      </ng-container>
       
-      <div class="car-gallery">
-        <img src="../../images/Audi-RS8-render.jpg">
-        <img src="" alt="Car 2">
-        <img src="../../images/audiRS8.png" alt="Car 3">
-        <img src="../../images/Audi-RS8-render.jpg" alt="">
-        <!-- Add more images as needed -->
-      </div>
     </div>
-
-    <div class="car-card">
-        <img src="../../images/audiRS8.png" alt="Car">
-        <div class="car-details">
-          <h2>Car Model</h2>
-          <p>Car Brand</p>
-          <p>Year: 2022</p>
-          <!-- Add more details as needed -->
-        </div>
-      </div>
     
     </body>

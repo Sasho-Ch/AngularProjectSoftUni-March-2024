@@ -8,8 +8,13 @@
     </div>
     <div>
       <ul>
-        <li><a routerLink="login">Login</a></li>
-        <li><a routerLink="register">Register</a></li>
+        <ng-container *ngIf="!token">
+            <li><a routerLink="login">Login</a></li>
+            <li><a routerLink="register">Register</a></li>
+        </ng-container>
+        <ng-container *ngIf="token">
+            <li><a (click)="logout()">Logout</a></li>
+        </ng-container>
       </ul>
     </div>
   </nav>

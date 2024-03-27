@@ -7,13 +7,14 @@ import { HomeComponent } from './home/home.component';
 import { NewCarComponent } from './auth/new-car/new-car.component';
 
 const routes: Routes = [
-  {path: '', redirectTo: '/home', pathMatch: 'full'},
+  {path: '', redirectTo: '/home', pathMatch: 'full', },
   {path: 'home', component: HomeComponent},
   {path: 'dashboard', component: DashboardComponent},
   {path: 'new-car', component: NewCarComponent},
   {path: 'login', component: LoginComponent},
   {path: 'register', component: RegisterComponent},
   {path: 'dashboard', component: DashboardComponent},
+  
 ];
 
 @NgModule({

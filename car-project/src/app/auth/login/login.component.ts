@@ -18,7 +18,7 @@ export class LoginComponent {
       return;
     }
 
-    if (this.password == '') {
+    if (this.password === '') {
       alert('Please enter password');
       return;
     }
