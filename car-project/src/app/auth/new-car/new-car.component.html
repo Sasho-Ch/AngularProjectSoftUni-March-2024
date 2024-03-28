@@ -1,30 +1,58 @@
 <body>
-
-    <div class="container">
+  <div class="container">
+    <ng-container *ngIf="token">
       <h1>Add Your Car</h1>
       <form>
         <div class="form-group">
           <label for="brand">Car Brand:</label>
-          <input type="text" id="brand" name="brand" required>
+          <input
+            type="text"
+            id="carBrand"
+            name="carBrand"
+            required
+            [(ngModel)]="car_brand"
+          />
         </div>
         <div class="form-group">
           <label for="model">Car Model:</label>
-          <input type="text" id="model" name="model" required>
+          <input
+            type="text"
+            id="carModel"
+            name="carModel"
+            required
+            [(ngModel)]="car_model"
+          />
         </div>
         <div class="form-group">
           <label for="year">Car Year:</label>
-          <input type="text" id="year" name="year" required>
-        </div>
-        <div class="form-group">
-          <label for="imageUrl">Image URL:</label>
-          <input type="text" id="imageUrl" name="imageUrl" required>
+          <input
+            type="text"
+            id="carYear"
+            name="carYear"
+            required
+            [(ngModel)]="car_year"
+          />
         </div>
         <div class="form-group">
           <label for="description">Description:</label>
-          <textarea id="description" name="description" rows="2" required></textarea>
+          <input
+            type="text"
+            id="description"
+            name="description"
+            required
+            [(ngModel)]="description"
+          />
         </div>
-        <button type="submit" class="btn-add-car">Add Car</button>
+        <button type="submit" class="btn-add-car" (click)="addCar()">
+          Add Car
+        </button>
       </form>
-    </div>
-    
-    </body>
+    </ng-container>
+
+    <ng-container *ngIf="!token">
+      <a routerLink="/login" class="btn">Login</a>
+      <a routerLink="/register" class="btn">Register</a>
+    </ng-container>
+  </div>
+  
+</body>
