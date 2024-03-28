@@ -7,6 +7,8 @@ import { AuthService } from 'src/app/shared/auth.service';
   styleUrls: ['./register.component.css']
 })
 export class RegisterComponent {
+  token = !!localStorage.getItem('token');
+
   email: string = '';
   password: string = '';
   rePassword: string = '';

@@ -7,6 +7,8 @@ import { AuthService } from 'src/app/shared/auth.service';
   styleUrls: ['./login.component.css'],
 })
 export class LoginComponent {
+  token = !!localStorage.getItem('token');
+
   email: string = '';
   password: string = '';
 

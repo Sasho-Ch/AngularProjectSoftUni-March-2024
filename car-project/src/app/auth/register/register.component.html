@@ -1,4 +1,4 @@
-<body>
+<body *ngIf="!token">
   <div class="registration-container">
     <h2>Create Your Car Account</h2>
     <form action="#" method="post">
@@ -37,5 +37,12 @@
       </button>
     </form>
     <a href="login" class="login-link">Already have an account? Login here!</a>
+  </div>
+</body>
+
+<body *ngIf="token">
+  <div class="registration-container">
+    <h2>You are already in your account!</h2>
+      <button type="submit" routerLink="/home" class="btn-register">Home page</button>
   </div>
 </body>
