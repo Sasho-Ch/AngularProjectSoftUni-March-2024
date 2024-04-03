@@ -7,4 +7,5 @@ import { Component, OnChanges, OnInit } from '@angular/core';
 })
 export class HomeComponent{
   token = !!localStorage.getItem('token');
+
 }

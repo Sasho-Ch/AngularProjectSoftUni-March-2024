@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Car } from 'src/app/model/car';
 import { DataService } from 'src/app/shared/data.service';
+import { getAuth } from 'firebase/auth';
 
 @Component({
   selector: 'app-new-car',
@@ -9,6 +10,7 @@ import { DataService } from 'src/app/shared/data.service';
 })
 export class NewCarComponent {
   token = !!localStorage.getItem('token');
+
 
   carsList: Car[] = [];
   carObj: Car = {

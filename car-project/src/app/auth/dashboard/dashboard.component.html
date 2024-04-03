@@ -17,6 +17,7 @@
             <td>{{car.car_model}}</td>
             <td>{{car.car_year}}</td>
             <td>{{car.description}}</td>
+            <td *ngIf="token"><button class="btn-update" (click)="updateCar(car)">Update</button></td>
             <td *ngIf="token"><button class="btn-delete" (click)="deleteCar(car)">Delete</button></td>
           </tr>
           <!-- Add more rows as needed -->

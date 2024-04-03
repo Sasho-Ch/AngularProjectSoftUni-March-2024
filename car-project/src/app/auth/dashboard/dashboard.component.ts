@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Car } from 'src/app/model/car';
 import { DataService } from 'src/app/shared/data.service';
+import { getAuth } from 'firebase/auth';
 
 @Component({
   selector: 'app-dashboard',
@@ -46,7 +47,7 @@ export class DashboardComponent implements OnInit{
 
   }
 
-  updateCar() {
+  updateCar(car: Car) {
 
   }
 
